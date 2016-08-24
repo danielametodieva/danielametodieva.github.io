@@ -10,6 +10,7 @@ function build {
   npm install
   bundle install
   bower install
+  brew install graphicsmagick
   grunt build --target=prod
 }
 
