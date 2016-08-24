@@ -1,3 +1,14 @@
+<a name="1.0.5"></a>
+## 1.0.5 (2016-08-24)
+
+
+### Bug Fixes
+
+* **Build:** Corrected path in open.js ([28dda51](https://github.com/danielametodieva/danielametodieva.github.io/commit/28dda51))
+* **Images:** Added missed production images ([3c6a6a3](https://github.com/danielametodieva/danielametodieva.github.io/commit/3c6a6a3))
+
+
+
 <a name="1.0.4"></a>
 ## 1.0.4 (2016-08-24)
 
