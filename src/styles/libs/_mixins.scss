@@ -49,7 +49,7 @@
   background-size: cover;
 
   @for $i from 1 through map-get($projects, length) {
-    .project#{$i} & {
+    &[data-project='#{$i}'] {
       background-image: url('#{$path}project#{$i}.jpg');
     }
   }
