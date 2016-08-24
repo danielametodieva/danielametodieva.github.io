@@ -7,6 +7,9 @@ env:
   - ENCRYPTION_LABEL: "f223f14fc897"
   - COMMIT_AUTHOR_EMAIL: "metodieva.daniel@gmail.com"
 
+before_script:
+  - sudo apt-get install graphicsmagick
+
 branches:
   only:
   - prod
