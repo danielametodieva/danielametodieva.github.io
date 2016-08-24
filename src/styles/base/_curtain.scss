@@ -11,12 +11,12 @@ main {
 }
 
 section {
-  @include transition(top .3s ease-out);
+  @include transition(top .3s ease-out, left .3s ease-out);
 
-  top: -102%;
+  top: -102% !important;
 
   body[data-mode='opened'] & {
-    top: 0;
+    top: 0 !important;
   }
 }
 

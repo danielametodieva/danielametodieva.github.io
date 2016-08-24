@@ -39,7 +39,9 @@ section {
   max-width: 426px;
   min-width: 320px;
   overflow: hidden;
+  cursor: move;
   border-right: 1px solid rgba($col-black, .33);
+  border-left: 1px solid rgba($col-black, .33);
 
   @at-root {
     .mobile {
@@ -93,6 +95,7 @@ article {
   height: 100%;
   color: $col-white;
   border-right: 1px solid rgba($col-white, .33);
+  border-left: 1px solid rgba($col-white, .33);
 
   // scss-lint:disable all
   .mCS_no_scrollbar_y {
@@ -107,7 +110,7 @@ article {
   .table {
     display: table;
     height: 100%;
-    padding: 8%;
+    padding: 7%;
 
     > .row {
       display: table-row;

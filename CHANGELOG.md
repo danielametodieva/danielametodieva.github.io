@@ -1,3 +1,13 @@
+<a name="1.2.0"></a>
+# 1.2.0 (2016-08-24)
+
+
+### Features
+
+* **Dragging:** Ability to move the content around ([e80f59d](https://github.com/danielametodieva/danielametodieva.github.io/commit/e80f59d))
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0 (2016-08-24)
 
