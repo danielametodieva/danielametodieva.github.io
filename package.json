@@ -2,7 +2,7 @@
   "name": "homepage",
   "title": "A passion for retouch",
   "description": "Daniela Metodieva's personal webpage",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "grunt-contrib-compass": "^1.1.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-htmlmin": "^2.0.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-pug": "^1.0.0",
