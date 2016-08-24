@@ -1,0 +1,108 @@
+/* =========================| Toogle button |========================= */
+
+
+
+.toggle {
+
+  @mixin toggle-size($size) {
+    width: $size;
+    height: $size;
+    background-size: ($size * .5) auto;
+  }
+
+
+
+//====================> 1. Base
+
+  @include border-radius(50%);
+  @include transition(top .3s ease-in-out);
+
+  position: fixed;
+  z-index: 2;
+  cursor: pointer;
+  background-color: rgba($col-black, .5);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @at-root {
+    .mobile {
+      .toggle {
+        @media screen and (max-width: 600px) {
+          left: 50%;
+        }
+
+        @media screen and (min-width: 601px) {
+          left: 160px;
+        }
+      }
+
+      body[data-mode='opened'] .toggle {
+        @include translate(-50%, -120%);
+
+        top: 100%;
+      }
+
+      body[data-mode='closed'] .toggle {
+        @include translate(-50%, 20%);
+
+        top: 0;
+      }
+    }
+  }
+
+  html:not(.mobile) &:hover {
+    background-color: $col-black;
+  }
+
+  @media screen and (max-width: 975px) {
+    @include toggle-size(30px);
+  }
+
+  @media screen and (min-width: 976px) and (max-width: 1279px) {
+    @include toggle-size(3.16vw);
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include toggle-size(42px);
+  }
+
+
+//====================> 2. Modes
+
+  @at-root {
+    body[data-mode='opened'] {
+      .toggle {
+        background-image: inline-image('toggles/arrow.svg');
+      }
+    }
+
+    body[data-mode='closed'] {
+      .toggle {
+        background-image: inline-image('toggles/text.svg');
+
+        .ie & {
+          top: 20px;
+          left: 20px;
+        }
+      }
+    }
+
+    html:not(.mobile) body[data-mode='opened'] .toggle {
+      @include hacks();
+
+      @include prefixed(animation-name, 'hvr-bob-float, hvr-bob');
+      @include prefixed(animation-duration, '.3s, 1.5s');
+      @include prefixed(animation-delay, '0s, .3s');
+      @include prefixed(animation-timing-function, 'ease-out, ease-in-out');
+      @include prefixed(animation-iteration-count, '1, infinite');
+      @include prefixed(animation-fill-mode, 'forwards');
+      @include prefixed(animation-direction, 'normal, alternate');
+    }
+
+    html:not(.mobile) body[data-mode='closed'] .toggle {
+      @include pulse-grow();
+    }
+  }
+
+
+} // .toggle

@@ -1,0 +1,129 @@
+/* =========================| Structure |========================= */
+
+
+
+//====================> 1. Main
+
+main {
+  @include projects('../images/projects/');
+}
+
+
+
+//====================> 2. Section
+
+section {
+  @include box-shadow(1px 0 25px rgba($col-black, .25));
+
+  position: relative;
+  width: 33%;
+  height: 100%;
+  max-width: 426px;
+  min-width: 320px;
+  overflow: hidden;
+  border-right: 1px solid rgba($col-black, .33);
+
+  @at-root {
+    .mobile {
+      section {
+        @media screen and (max-width: 600px) {
+          width: 100%;
+          max-width: 100%;
+          border: 0;
+        }
+      }
+    }
+  }
+
+  .bgr {
+    @include projects('../images/projects/blurred/');
+    @include transition(width .3s ease-in-out);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+  }
+
+  &::after {
+    @include transition(background-color .2s ease-in-out);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($col-black, .33);
+    content: '';
+  }
+
+  html:not(.mobile) &:hover::after {
+    background-color: rgba($col-black, .50);
+  }
+}
+
+
+
+//====================> 3. Article
+
+article {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  color: $col-white;
+  border-right: 1px solid rgba($col-white, .33);
+
+  // scss-lint:disable all
+  .mCS_no_scrollbar_y {
+    height: 100%;
+  }
+
+  .mCSB_inside>.mCSB_container {
+    margin-right: 0;
+  }
+  // scss-lint:enable all
+
+  .table {
+    display: table;
+    height: 100%;
+    padding: 8%;
+
+    > .row {
+      display: table-row;
+
+      &:nth-child(2) {
+        height: 100%;
+      }
+
+      > .cell {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  body[data-mode='opened'] & {
+    overflow: auto;
+  }
+
+  body[data-mode='closed'] & {
+    overflow: visible;
+  }
+
+  @at-root {
+    .mobile {
+      article {
+        @media screen and (max-width: 600px) {
+          border: 0;
+        }
+      }
+    }
+
+    .gecko body[data-mode='opened'] article {
+      @include translate3d(0, 0, 0);
+    }
+  }
+}

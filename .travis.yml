@@ -1,0 +1,12 @@
+language: generic # don't install any environment
+
+script: bash ./deploy.sh
+
+env:
+  global:
+  - ENCRYPTION_LABEL: "f223f14fc897"
+  - COMMIT_AUTHOR_EMAIL: "metodieva.daniel@gmail.com"
+
+branches:
+  only:
+  - prod

@@ -1,0 +1,19 @@
+## CACHES ##
+.sass-cache/
+
+## LOGS ##
+npm-debug.log
+
+## DEPENDENCIES ##
+node_modules/
+bower_components/
+
+## SYSTEM ##
+.DS_Store
+.idea
+
+## BUILD ARTEFACTS ##
+/src/images/projects/blurred
+
+## DISTRIBUTION ##
+/dist

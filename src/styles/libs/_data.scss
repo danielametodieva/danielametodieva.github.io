@@ -1,0 +1,42 @@
+/* =========================| Variables |========================= */
+
+
+
+//--------------------------| Colors
+
+$col-black:  #000;
+
+$gray-dark:  lighten($col-black, 26.8%); // #444
+$gray:       lighten($col-black, 33.5%); // #555
+$gray-light: lighten($col-black, 46.7%); // #777
+
+$col-white:  #fff;
+
+
+//--------------------------| Scaffolding
+
+//** Background color for `<body>`.
+$body-bg:               $col-white;
+
+//** Global text color on `<body>`.
+$text-color:            $gray-dark;
+
+//** Global textual link color.
+// TODO: Set colors for links
+
+
+//--------------------------| Typography
+
+$font-family-sans-serif:  "myriad-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base:        $font-family-sans-serif;
+
+$font-size-base:          22px;
+$font-size-heading:       32px;
+$line-height-base:        1.5;
+
+
+//--------------------------| Projects
+
+$projects: (
+  'length': 5
+);
