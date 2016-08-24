@@ -1,7 +1,8 @@
 module.exports = {
     options: {
         jshintrc: 'configs/conventions/.jshintrc',
-        debug: false
+        debug: false,
+        ignores: ['src/scripts/jquery-ui.min.js']
     },
 
     target: {

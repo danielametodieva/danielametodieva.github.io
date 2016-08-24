@@ -29,8 +29,25 @@ var page = {
             $body = $('body');
 
         $toggle.click(function() {
-            var mode = $body.attr('data-mode') === 'opened' ? 'closed' : 'opened';
+            var mode = $body.attr('data-mode') === 'opened' ? 'closed' : 'opened',
+                $toggleText = $('.toggle.text'),
+                $toggleArrow = $('.toggle.arrow');
+
             $body.attr('data-mode', mode);
+
+            if (mode === 'closed') {
+                var top = $toggleArrow.offset().top,
+                    left = $toggleArrow.offset().left;
+
+                $toggleText.css({top: top, left: left});
+
+                setTimeout(function() {
+                    $toggleText.addClass('show');
+                }, 300);
+            }
+            else {
+                $toggleText.removeClass('show');
+            }
         });
 
         $('.avatar img').click(function() {
@@ -105,5 +122,20 @@ $(window).on('load', function(){
         page.reveal();
 
         $('body').attr('data-mode', 'opened');
+        $('html:not(.mobile) section').draggable({
+            axis: 'x',
+            containment: 'parent',
+            refreshPositions: true
+        });
+
+        if (!$('html').is('.mobile')) {
+            $(window).resize(function() {
+                var $section = $('section');
+
+                if ($section.offset().left > 0) {
+                    $section.css({left: 0});
+                }
+            });
+        }
     }, 100);
 });

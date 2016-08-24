@@ -15,6 +15,7 @@ module.exports = {
             'bower_components/memoryroll/dist/js/jquery.memoryroll.min.js',
 
             // Internal scripts
+            'src/scripts/jquery-ui.min.js',
             'src/scripts/<%= pkg.name %>.js'
         ],
         dest: 'dist/assets/js/<%= pkg.name %>_bundle.js'
