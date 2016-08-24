@@ -1,3 +1,13 @@
+<a name="1.1.0"></a>
+# 1.1.0 (2016-08-24)
+
+
+### Features
+
+* **Wallpaper:** Auto loop ([d4390dd](https://github.com/danielametodieva/danielametodieva.github.io/commit/d4390dd))
+
+
+
 <a name="1.0.5"></a>
 ## 1.0.5 (2016-08-24)
 
