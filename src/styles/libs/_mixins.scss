@@ -1,0 +1,56 @@
+/* =========================| Mixins |========================= */
+
+
+
+//--------------------------| Clearfix
+
+@mixin cf() {
+  &::before,
+  &::after {
+    display: table;
+    content: ' ';
+  }
+
+  &::after { clear: both; }
+}
+
+
+//--------------------------| Font smoothing
+
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+  @else {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+
+
+//--------------------------| GPU acceleration
+
+@mixin accelerate-gpu() {
+  @include transform(translate3d(0, 0, 0));
+  @include backface-visibility();
+  @include perspective(1000);
+  // @include scale();
+}
+
+
+//--------------------------| Projects
+
+@mixin projects($path) {
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @for $i from 1 through map-get($projects, length) {
+    .project#{$i} & {
+      background-image: url('#{$path}project#{$i}.jpg');
+    }
+  }
+}

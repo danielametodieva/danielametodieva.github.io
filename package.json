@@ -1,0 +1,55 @@
+{
+  "name": "homepage",
+  "title": "A passion for retouch",
+  "description": "Daniela Metodieva's personal webpage",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danielametodieva/danielametodieva.github.io.git"
+  },
+  "homepage": "http://daniela.pro",
+  "author": {
+    "name": "Daniela Metodieva",
+    "email": "metodieva.daniel@gmail.com",
+    "url": "http://daniela.pro"
+  },
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "grunt": "^1.0.1",
+    "grunt-blurred-images": "^1.1.1",
+    "grunt-bump": "^0.8.0",
+    "grunt-concurrent": "^2.0.3",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compass": "^1.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-htmlmin": "^2.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-conventional-changelog": "^6.1.0",
+    "grunt-open": "^0.2.3",
+    "grunt-real-favicon": "^0.1.7",
+    "grunt-scss-lint": "^0.3.8",
+    "grunt-shell": "^1.3.1",
+    "grunt-tinypng": "^0.6.1",
+    "http-rewrite-middleware": "^0.1.6",
+    "load-grunt-config": "^0.19.2",
+    "load-grunt-tasks": "^3.2.0",
+    "time-grunt": "^1.2.1"
+  },
+  "keywords": [
+    "daniela",
+    "metodieva",
+    "photography",
+    "retouch",
+    "photograph",
+    "retoucher",
+    "photoshop"
+  ],
+  "scripts": {
+    "start": "npm install && bundle install && bower install && grunt clean:all && grunt dev"
+  }
+}

@@ -1,0 +1,138 @@
+/* =========================| Content |========================= */
+
+
+
+.content {
+
+//====================> 1. Base
+
+  @include text-shadow(1px 1px 1px rgba($col-black, .5));
+
+  margin: 8% 0;
+
+
+
+//====================> 2. Title
+
+  .title {
+    @include translate3d(0, 0, 0);
+
+    position: relative;
+    display: flex;
+    margin-bottom: 8%;
+    font-size: 0;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: 92%;
+      height: 0;
+      overflow: hidden;
+      border-bottom: 1px solid $col-white;
+      content: '';
+    }
+  }
+
+
+//------------------> 2.1. Avatar
+
+  .avatar {
+    @mixin avatar-size($size) {
+      width: $size;
+      height: $size;
+    }
+
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-right: 4.15%;
+
+    img {
+      @include border-radius(50%);
+      @include reset-focus();
+      @include transition(all .3s ease-in-out);
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid $col-white;
+
+      &.focused {
+        width: 256px;
+        height: 256px;
+        border-width: 5px;
+      }
+
+      html:not(.mobile) &:not(.focused) {
+        @include pulse-grow();
+      }
+    }
+
+    @media screen and (max-width: 975px) {
+      @include avatar-size(48.8px);
+    }
+
+    @media screen and (min-width: 976px) and (max-width: 1279px) {
+      @include avatar-size(5vw);
+    }
+
+    @media screen and (min-width: 1280px) {
+      @include avatar-size(64px);
+    }
+  }
+
+
+//------------------> 2.2. Heading
+
+  h1 {
+    @mixin heading-size($size) {
+      font-size: $size;
+      line-height: $size * 2;
+    }
+
+    @include ellipsis();
+
+    display: inline-block;
+    flex: 1;
+    margin: 0;
+    font-weight: 300;
+
+    @media screen and (max-width: 975px) {
+      @include heading-size(24.4px);
+    }
+
+    @media screen and (min-width: 976px) and (max-width: 1279px) {
+      @include heading-size(2.5vw);
+    }
+
+    @media screen and (min-width: 1280px) {
+      @include heading-size($font-size-heading);
+    }
+  }
+
+
+//====================> 3. Text
+
+  .text {
+    @media screen and (max-width: 975px) {
+      font-size: 16.7872px;
+    }
+
+    @media screen and (min-width: 976px) and (max-width: 1279px) {
+      font-size: 1.72vw;
+    }
+
+    @media screen and (min-width: 1280px) {
+      font-size: $font-size-base;
+    }
+  }
+
+
+} // .content
