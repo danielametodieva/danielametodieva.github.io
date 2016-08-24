@@ -5,12 +5,30 @@
 //====================> 1. Main
 
 main {
-  @include projects('../images/projects/');
+  position: relative;
+  z-index: 1;
+  height: 100%;
 }
 
 
 
-//====================> 2. Section
+//====================> 2. Wallpaper
+
+.wallpaper {
+  @include projects('../images/projects/');
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+}
+
+
+
+//====================> 3. Section
 
 section {
   @include box-shadow(1px 0 25px rgba($col-black, .25));
@@ -35,7 +53,7 @@ section {
     }
   }
 
-  .bgr {
+  .glass {
     @include projects('../images/projects/blurred/');
     @include transition(width .3s ease-in-out);
 
@@ -67,7 +85,7 @@ section {
 
 
 
-//====================> 3. Article
+//====================> 4. Article
 
 article {
   position: relative;
