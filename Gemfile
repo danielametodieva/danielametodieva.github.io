@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
 gem "sass", "3.4.19"
-gem "json", "2.0.2"
 gem "scss_lint", "0.48.0"
 gem "sass-css-importer", "1.0.0.beta.0"
 gem "compass", "1.0.3"
