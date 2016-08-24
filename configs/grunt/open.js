@@ -6,7 +6,7 @@ module.exports = {
 
     prod : {
         app: 'Google Chrome',
-        path: '/<%= pkg.homepage %>'
+        path: '<%= pkg.homepage %>'
     },
 
     build: {

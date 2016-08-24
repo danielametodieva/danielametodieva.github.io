@@ -18,7 +18,8 @@ module.exports = {
     ],
 
     prod: [
-        'htmlmin'
+        'htmlmin',
+        'copy:prod_images'
     ],
 
     review: [
