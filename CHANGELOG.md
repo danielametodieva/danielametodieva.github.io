@@ -1,3 +1,13 @@
+<a name="1.4.2"></a>
+## 1.4.2 (2016-08-25)
+
+
+### Bug Fixes
+
+* **Dragging:** Removed transition due to lagging ([8a59bdb](https://github.com/danielametodieva/danielametodieva.github.io/commit/8a59bdb))
+
+
+
 <a name="1.4.1"></a>
 ## 1.4.1 (2016-08-25)
 
