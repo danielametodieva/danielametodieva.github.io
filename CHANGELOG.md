@@ -1,3 +1,18 @@
+<a name="1.4.0"></a>
+# 1.4.0 (2016-08-25)
+
+
+### Bug Fixes
+
+* **Title line:** Short title line on small screens ([fe85ce3](https://github.com/danielametodieva/danielametodieva.github.io/commit/fe85ce3))
+
+
+### Features
+
+* **Drag handler:** New drag handler at the top ([ae12124](https://github.com/danielametodieva/danielametodieva.github.io/commit/ae12124))
+
+
+
 <a name="1.3.1"></a>
 ## 1.3.1 (2016-08-25)
 
