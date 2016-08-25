@@ -112,7 +112,6 @@
     flex: 1;
     margin: 0;
     font-weight: 300;
-    cursor: text;
 
     &::after {
       position: absolute;
@@ -143,8 +142,6 @@
 //====================> 3. Text
 
   .text {
-    cursor: text;
-
     p {
       margin: 0 0 16px;
     }
