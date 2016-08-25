@@ -1,3 +1,13 @@
+<a name="1.4.1"></a>
+## 1.4.1 (2016-08-25)
+
+
+### Bug Fixes
+
+* **Avatar behind the underline:** Added z-index ([da17aa9](https://github.com/danielametodieva/danielametodieva.github.io/commit/da17aa9))
+
+
+
 <a name="1.4.0"></a>
 # 1.4.0 (2016-08-25)
 
