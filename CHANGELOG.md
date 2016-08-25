@@ -1,3 +1,13 @@
+<a name="1.3.0"></a>
+# 1.3.0 (2016-08-25)
+
+
+### Features
+
+* **Text columns:** Split text on small screens ([1b6ddf7](https://github.com/danielametodieva/danielametodieva.github.io/commit/1b6ddf7))
+
+
+
 <a name="1.2.0"></a>
 # 1.2.0 (2016-08-24)
 
