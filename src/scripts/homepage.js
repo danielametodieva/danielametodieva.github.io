@@ -125,7 +125,8 @@ $(window).on('load', function(){
         $('html:not(.mobile) section').draggable({
             axis: 'x',
             containment: 'parent',
-            refreshPositions: true
+            cursor: 'move',
+            handle: '.dragzone'
         });
 
         if (!$('html').is('.mobile')) {

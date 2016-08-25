@@ -39,7 +39,6 @@ section {
   max-width: 426px;
   min-width: 320px;
   overflow: hidden;
-  cursor: move;
   border-right: 1px solid rgba($col-black, .33);
   border-left: 1px solid rgba($col-black, .33);
 
@@ -92,6 +91,40 @@ article {
   border-right: 1px solid rgba($col-white, .33);
   border-left: 1px solid rgba($col-white, .33);
 
+  .dragzone {
+    display: none;
+  }
+
+  html:not(.mobile) & {
+    .dragzone {
+      @include opacity(0);
+      @include transition(opacity .2s ease-in-out);
+
+      position: absolute;
+      top: 2px;
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 15px;
+      cursor: move;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGklEQVQIW2P8////f0ZGRkYGBgYGMAEDKBwAkmUEBOSNpMcAAAAASUVORK5CYII=');
+    }
+  }
+
+  @at-root {
+    html:not(.mobile) {
+      article:hover .dragzone {
+        @include opacity(.75);
+      }
+
+      article .dragzone:hover,
+      .ui-draggable-dragging article .dragzone {
+        @include opacity(1);
+      }
+    }
+  }
+
   // scss-lint:disable all
   .mCS_no_scrollbar_y {
     height: 100%;
@@ -132,6 +165,10 @@ article {
   @media screen and (max-width: 600px),
          screen and (max-width: 768px) and (max-height: 620px) and (orientation: landscape) {
     border: 0;
+
+    .dragzone {
+      display: none !important;
+    }
   }
 
   @media screen and (max-width: 768px) and (max-height: 620px) and (orientation: landscape) {
