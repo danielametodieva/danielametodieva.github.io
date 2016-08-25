@@ -13,7 +13,19 @@
   margin: 0 auto;
   background: inline-image('logotype.svg') no-repeat center top;
 
-  .mobile & {
-    margin-bottom: 7%;
+  @media screen and (max-width: 768px) and (max-height: 620px) and (orientation: landscape) {
+    padding-top: 12%;
+  }
+
+  @at-root {
+    .mobile .logotype {
+      margin-bottom: 7%;
+    }
+
+    @media screen and (max-width: 768px) and (max-height: 620px) and (orientation: landscape) {
+      html:not(.mobile) .logotype {
+        margin-bottom: 4%;
+      }
+    }
   }
 }
