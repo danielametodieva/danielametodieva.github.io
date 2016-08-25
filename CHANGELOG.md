@@ -1,3 +1,13 @@
+<a name="1.3.1"></a>
+## 1.3.1 (2016-08-25)
+
+
+### Bug Fixes
+
+* **Text columns:** Avoid splitting paragraphs ([3f1bd97](https://github.com/danielametodieva/danielametodieva.github.io/commit/3f1bd97))
+
+
+
 <a name="1.3.0"></a>
 # 1.3.0 (2016-08-25)
 
