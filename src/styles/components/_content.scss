@@ -86,15 +86,16 @@
       }
     }
 
-    @media screen and (max-width: 975px) {
+    @media screen and (max-width: 975px),
+           screen and (max-height: 800px) and (orientation: landscape) {
       @include avatar-size(48.8px);
     }
 
-    @media screen and (min-width: 976px) and (max-width: 1279px) {
+    @media screen and (min-height: 801px) and (min-width: 976px) and (max-width: 1279px) {
       @include avatar-size(5vw);
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-height: 801px) and (min-width: 1280px) {
       @include avatar-size(64px);
     }
   }
@@ -128,15 +129,16 @@
       content: '';
     }
 
-    @media screen and (max-width: 975px) {
+    @media screen and (max-width: 975px),
+           screen and (max-height: 800px) and (orientation: landscape) {
       @include heading-size(24.4px);
     }
 
-    @media screen and (min-width: 976px) and (max-width: 1279px) {
+    @media screen and (min-height: 801px) and (min-width: 976px) and (max-width: 1279px) {
       @include heading-size(2.5vw);
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-height: 801px) and (min-width: 1280px) {
       @include heading-size($font-size-heading);
     }
   }
@@ -149,15 +151,16 @@
       margin: 0 0 16px;
     }
 
-    @media screen and (max-width: 975px) {
+    @media screen and (max-width: 975px),
+           screen and (max-height: 800px) and (orientation: landscape) {
       font-size: 16.7872px;
     }
 
-    @media screen and (min-width: 976px) and (max-width: 1279px) {
+    @media screen and (min-height: 801px) and (min-width: 976px) and (max-width: 1279px) {
       font-size: 1.72vw;
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-height: 801px) and (min-width: 1280px) {
       font-size: $font-size-base;
     }
 

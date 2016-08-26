@@ -40,15 +40,16 @@
     background-color: $col-black;
   }
 
-  @media screen and (max-width: 975px) {
+  @media screen and (max-width: 975px),
+         screen and (max-height: 800px) and (orientation: landscape) {
     @include toggle-size(30px);
   }
 
-  @media screen and (min-width: 976px) and (max-width: 1279px) {
+  @media screen and (min-height: 801px) and (min-width: 976px) and (max-width: 1279px) {
     @include toggle-size(3.16vw);
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-height: 801px) and (min-width: 1280px) {
     @include toggle-size(42px);
   }
 
