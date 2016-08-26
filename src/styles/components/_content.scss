@@ -46,6 +46,8 @@
     margin-right: 4.15%;
 
     &::after {
+      @include translate3d(0, 0, 0);
+
       position: absolute;
       bottom: 0;
       left: 50%;
