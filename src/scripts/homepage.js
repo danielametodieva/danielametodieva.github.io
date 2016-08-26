@@ -2,141 +2,194 @@
 
 
 
-var page = {
-    projectsLength: 5,
-    projects: function() {
-        this.project = $.memoryroll({
-            name: 'projects',
+(function app() {
+    var
+        // Number of backgrounds
+        backgroundsLength = 5,
+
+        // Lifecycle of a background
+        loopDuration = 10000, // 10 seconds
+
+        // Duration time of a background switch
+        transitionDuration = 1000, // 1 second
+
+        // First background
+        currentBGR = $.memoryroll({
+            name: 'daniela.pro_background',
             rangeFrom: 1,
-            rangeTo: this.projectsLength
-        });
+            rangeTo: backgroundsLength
+        }),
 
-        var orientation = function() {
-                if ($(window).width() >= $(window).height()) { $('body').addClass('land'); }
-                else { $('body.land').removeClass('land'); }
-            };
+        // Utilities functions
+        ut = {
+            fnTrigger: function(list) {
+                for (var f in list) {
+                    list[f]();
+                }
+            },
 
-        orientation();
-        $(window).resize(orientation);
+            setBackground: function(obj, bgr) {
+                obj.attr('data-project', bgr ? bgr : currentBGR);
 
-        $('.bgr').attr('data-project', this.project);
-
-        return this;
-    },
-
-    sidebar: function() {
-        var $toggle = $('.toggle'),
-            $body = $('body');
-
-        $toggle.click(function() {
-            var mode = $body.attr('data-mode') === 'opened' ? 'closed' : 'opened',
-                $toggleText = $('.toggle.text'),
-                $toggleArrow = $('.toggle.arrow');
-
-            $body.attr('data-mode', mode);
-
-            if (mode === 'closed') {
-                var top = $toggleArrow.offset().top,
-                    left = $toggleArrow.offset().left;
-
-                $toggleText.css({top: top, left: left});
-
-                setTimeout(function() {
-                    $toggleText.addClass('show');
-                }, 300);
+                return obj;
             }
-            else {
-                $toggleText.removeClass('show');
+        },
+
+        // Functions that will be triggered one by one automatically when the DOM is loaded
+        init = {
+            setFirstBackground: function() {
+                ut.setBackground($('.bgr')).addClass('js_active');
+
+                return this;
             }
-        });
+        },
 
-        $('.avatar img').click(function() {
-            $(this).toggleClass('focused');
-        });
+        // Functions that will be triggered one by one automatically from the showtime() function
+        commonFeatures = {
+            setAvatarZoomFeature: function() {
+                $('.avatar img').click(function() {
+                    $(this).toggleClass('focused');
+                });
 
-        return this;
-    },
+                return this;
+            },
 
-    reveal: function() {
-        $('body').removeClass('curtain');
-        $('html:not(.mobile) article').mCustomScrollbar();
+            setContentToggleFeature: function() {
+                var $toggle = $('.toggle'),
+                    $body = $('body');
 
-        this.loadProjects();
+                $toggle.click(function() {
+                    var mode = $body.attr('data-mode') === 'opened' ? 'closed' : 'opened',
+                        $toggleText = $('.toggle.text'),
+                        $toggleArrow = $('.toggle.arrow');
 
-        return this;
-    },
+                    $body.attr('data-mode', mode);
 
-    loadProjects: function() {
-        var container = $('<div>').addClass('hidden');
+                    if (mode === 'closed') {
+                        var top = $toggleArrow.offset().top,
+                            left = $toggleArrow.offset().left;
 
-        $('body').append(container);
+                        $toggleText.css({top: top, left: left});
 
-        for(var i = 1; i <= this.projectsLength; i++) {
-            if (i !== parseInt(this.project)) {
-                container.append('<img src="assets/images/projects/project' + i + '.jpg">');
-                container.append('<img src="assets/images/projects/blurred/project' + i + '.jpg">');
+                        setTimeout(function() {
+                            $toggleText.addClass('show');
+                        }, 300);
+                    }
+                    else {
+                        $toggleText.removeClass('show');
+                    }
+                });
+
+                return this;
+            },
+
+            setSlideshow: function() {
+                var prepareNextBackground = function() {
+                    currentBGR = parseInt(currentBGR) !== backgroundsLength ?
+                    parseInt(currentBGR) + 1 :
+                        1;
+
+                    var bgrs = [ [$('body'), 'wallpaper'], [$('section'), 'glass'] ];
+
+                    for (var i in bgrs) {
+                        var new_bgr = ut.setBackground(
+                            $('<div class="bgr js_queue ' + bgrs[i][1] + '">')
+                        );
+
+                        bgrs[i][0].prepend(new_bgr);
+                    }
+
+                    return this;
+                };
+
+                prepareNextBackground();
+
+                setInterval(function() {
+                    $('.bgr.js_active')
+                        .removeClass('js_active')
+                        .fadeOut(transitionDuration, function() {
+                            $(this).remove();
+                        });
+
+                    $('.bgr.js_queue').removeClass('js_queue').addClass('js_active bgr');
+
+                    localStorage.memoryroll_projects = currentBGR;
+
+                    prepareNextBackground();
+                }, loopDuration);
+
+                return this;
             }
-        }
+        },
 
-        this.rotateProjects();
+        // Functions that will be triggered one by one automatically from the showtime() function
+        desktopFeatures = {
+            customScrollbar: function() {
+                // Init custom scrollbar for short-height screens
+                $('article').mCustomScrollbar();
 
-        return this;
-    },
+                return this;
+            },
 
-    rotateProjects: function() {
-        setInterval(function() {
-            var currProject = parseInt(page.project),
-                nextProject = currProject !== page.projectsLength ? currProject + 1 : 1,
-                $body = $('body'),
-                $section = $('section'),
-                $activeBgr = $('.bgr.active');
+            draggingContent: function() {
+                // Init drag feature
+                $('section').draggable({
+                    axis: 'x',
+                    containment: 'parent',
+                    cursor: 'move',
+                    handle: '.dragzone'
+                });
 
-            page.project = nextProject;
-            localStorage.memoryroll_projects = page.project;
-            $body.prepend('<div class="wallpaper new" data-project="' + nextProject + '">');
-            $section.prepend('<div class="glass new" data-project="' + nextProject + '">');
-            $activeBgr.fadeOut(1000, function() {
-                $(this).prev().addClass('active bgr').removeClass('new');
-                $(this).remove();
-            });
-        }, 10000);
+                return this;
+            },
 
-        return this;
-    }
-};
-
-jQuery(document).ready(function() {
-
-    // Transform 'click' event to 'tap' event for mobile
-    FastClick.attach(document.body);
-
-    // Prepare stage
-    page.projects()
-        .sidebar();
-
-});
-
-// Reveal stage when all loaded
-$(window).on('load', function(){
-    setTimeout(function() {
-        page.reveal();
-
-        $('body').attr('data-mode', 'opened');
-        $('html:not(.mobile) section').draggable({
-            axis: 'x',
-            containment: 'parent',
-            cursor: 'move',
-            handle: '.dragzone'
-        });
-
-        if (!$('html').is('.mobile')) {
-            $(window).resize(function() {
+            restoringContentOnResize: function() {
                 var $section = $('section');
 
-                if ($section.offset().left > 0) {
-                    $section.css({left: 0});
-                }
-            });
-        }
-    }, 100);
-});
+                // Stick content bar to the left when resizing
+                $(window).resize(function() {
+                    if ($section.offset().left > 0) {
+                        $section.css({left: 0});
+                    }
+                });
+
+                return this;
+            }
+        },
+
+        showtime = function() {
+            // Show the scene
+            $('body').attr('data-mode', 'opened')
+                .removeClass('curtain');
+
+            // Setup common features
+            ut.fnTrigger(commonFeatures);
+
+            // Setup desktop features
+            if (!$('html').is('.mobile')) {
+                ut.fnTrigger(desktopFeatures);
+            }
+
+            return this;
+        };
+
+
+
+    jQuery(document).ready(function() {
+        // Transform 'click' event to 'tap' event for mobile
+        FastClick.attach(document.body);
+
+        // Initialize stage
+        ut.fnTrigger(init);
+    });
+
+
+
+    // Reveal stage when all loaded
+    $(window).on('load', function(){
+        setTimeout(function() {
+            showtime();
+        }, 100);
+    });
+
+})();
