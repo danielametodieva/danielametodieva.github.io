@@ -1,3 +1,14 @@
+<a name="1.4.3"></a>
+## 1.4.3 (2016-08-26)
+
+
+### Bug Fixes
+
+* **@media:** Shrinked content for laptop screens ([c57e73a](https://github.com/danielametodieva/danielametodieva.github.io/commit/c57e73a))
+* **Avatar underline:** Graphic glitch under Chrome ([40ad44f](https://github.com/danielametodieva/danielametodieva.github.io/commit/40ad44f))
+
+
+
 <a name="1.4.2"></a>
 ## 1.4.2 (2016-08-25)
 
