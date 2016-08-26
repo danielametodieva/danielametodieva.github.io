@@ -1,3 +1,13 @@
+<a name="1.4.4"></a>
+## 1.4.4 (2016-08-26)
+
+
+### Features
+
+* **Script refactoring:** New backgrounds handler ([9553e2e](https://github.com/danielametodieva/danielametodieva.github.io/commit/9553e2e))
+
+
+
 <a name="1.4.3"></a>
 ## 1.4.3 (2016-08-26)
 
