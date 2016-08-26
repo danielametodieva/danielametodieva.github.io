@@ -49,6 +49,12 @@ section {
     border: 0;
   }
 
+  @media screen and (max-height: 800px) and (orientation: landscape) {
+    html:not(.mobile) & {
+      width: 320px;
+    }
+  }
+
   .glass {
     @include projects('../images/projects/blurred/');
     @include transition(width .3s ease-in-out);
