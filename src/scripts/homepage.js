@@ -45,8 +45,8 @@
         },
 
         // Functions that will be triggered one by one automatically from the showtime() function
-        commonFeatures = {
-            setAvatarZoomFeature: function() {
+        features = {
+            avatarZoom: function() {
                 $('.avatar img').click(function() {
                     $(this).toggleClass('focused');
                 });
@@ -54,7 +54,7 @@
                 return this;
             },
 
-            setContentToggleFeature: function() {
+            contentToggle: function() {
                 var $toggle = $('.toggle'),
                     $body = $('body');
 
@@ -83,7 +83,7 @@
                 return this;
             },
 
-            setSlideshow: function() {
+            slideshow: function() {
                 var prepareNextBackground = function() {
                     currentBGR = parseInt(currentBGR) !== backgroundsLength ?
                     parseInt(currentBGR) + 1 :
@@ -119,11 +119,8 @@
                 }, loopDuration);
 
                 return this;
-            }
-        },
+            },
 
-        // Functions that will be triggered one by one automatically from the showtime() function
-        desktopFeatures = {
             customScrollbar: function() {
                 // Init custom scrollbar for short-height screens
                 $('article').mCustomScrollbar();
@@ -131,20 +128,16 @@
                 return this;
             },
 
-            draggingContent: function() {
+            draggableContent: function() {
+                var $section = $('section');
+
                 // Init drag feature
-                $('section').draggable({
+                $section.draggable({
                     axis: 'x',
                     containment: 'parent',
                     cursor: 'move',
-                    handle: '.dragzone'
+                    handle: !$('html').is('.mobile') ? '.dragzone' : false
                 });
-
-                return this;
-            },
-
-            restoringContentOnResize: function() {
-                var $section = $('section');
 
                 // Stick content bar to the left when resizing
                 $(window).resize(function() {
@@ -163,12 +156,7 @@
                 .removeClass('curtain');
 
             // Setup common features
-            ut.fnTrigger(commonFeatures);
-
-            // Setup desktop features
-            if (!$('html').is('.mobile')) {
-                ut.fnTrigger(desktopFeatures);
-            }
+            ut.fnTrigger(features);
 
             return this;
         };

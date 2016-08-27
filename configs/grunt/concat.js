@@ -14,8 +14,10 @@ module.exports = {
             'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
             'bower_components/memoryroll/dist/js/jquery.memoryroll.min.js',
 
-            // Internal scripts
             'src/scripts/jquery-ui.min.js',
+            'bower_components/jqueryui-touch-punch/jquery.ui.touch-punch.min.js',
+
+            // Internal scripts
             'src/scripts/<%= pkg.name %>.js'
         ],
         dest: 'dist/assets/js/<%= pkg.name %>_bundle.js'
