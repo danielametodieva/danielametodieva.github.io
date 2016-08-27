@@ -11,7 +11,7 @@
     "retoucher",
     "photoshop"
   ],
-  "version": "1.4.4",
+  "version": "1.5.0",
   "private": true,
   "homepage": "http://daniela.pro",
   "authors": [
@@ -32,6 +32,7 @@
     "fastclick": "^1.0.6",
     "memoryroll": "^1.0.3",
     "hover": "Hover#^2.0.2",
-    "malihu-custom-scrollbar-plugin": "^3.1.5"
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "jqueryui-touch-punch": "*"
   }
 }

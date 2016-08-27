@@ -1,3 +1,13 @@
+<a name="1.5.0"></a>
+# 1.5.0 (2016-08-27)
+
+
+### Features
+
+* **Draggable content:** Now available on mobile ([70fd320](https://github.com/danielametodieva/danielametodieva.github.io/commit/70fd320))
+
+
+
 <a name="1.4.4"></a>
 ## 1.4.4 (2016-08-26)
 
