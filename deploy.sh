@@ -6,6 +6,7 @@ TARGET_BRANCH="master"
 OUTPUT_DIR="dist"
 
 function build {
+  node -v
   npm install -g grunt-cli
   npm install
   bundle install
