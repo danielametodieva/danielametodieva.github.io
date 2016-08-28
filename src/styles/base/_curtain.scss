@@ -2,7 +2,8 @@
 
 
 
-main {
+main,
+.bgrs {
   @include transition(opacity .3s ease-in-out);
 
   .curtain > & {
