@@ -8,7 +8,7 @@ module.exports = {
         ['pug'],
 
         // styles
-        ['compass'],
+        ['stripCssComments', 'compass'],
 
         // scripts
         ['concat', 'uglify'],
