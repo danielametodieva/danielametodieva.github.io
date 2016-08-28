@@ -50,6 +50,10 @@
 
   @for $i from 1 through map-get($projects, length) {
     &[data-project='#{$i}'] {
+      background-image: url('#{$path}project#{$i}.webp');
+    }
+
+    .no-webp &[data-project='#{$i}'] {
       background-image: url('#{$path}project#{$i}.jpg');
     }
   }

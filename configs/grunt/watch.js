@@ -6,12 +6,12 @@ module.exports = {
 
     markup: {
         files: ['src/markup/**/*.pug', 'src/model/**/*.json'],
-        tasks: ['clean:markup', 'pug']
+        tasks: ['puglint', 'clean:markup', 'pug']
     },
 
     styles: {
         files: ['src/styles/**/*.scss', 'src/images/profiles/*.*', 'src/images/toggles/*.*', 'src/model/profiles.json'],
-        tasks: ['scsslint', 'clean:styles', 'compass']
+        tasks: ['scsslint', 'clean:styles', 'stripCssComments', 'compass']
     },
 
     scripts: {
@@ -21,7 +21,7 @@ module.exports = {
 
     images: {
         files: ['src/images/projects/*.*'],
-        tasks: ['blurred_images', 'tinypng', 'clean:images']
+        tasks: ['blurred_images', 'tinypng', 'cwebp', 'clean:images']
     },
 
     favicons: {
