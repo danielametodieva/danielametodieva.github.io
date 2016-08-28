@@ -1,3 +1,22 @@
+<a name="1.6.0"></a>
+# 1.6.0 (2016-08-28)
+
+
+### Bug Fixes
+
+* **Body scroll bouncing:** Prevented with "overflow: hidden" ([64a07b6](https://github.com/danielametodieva/danielametodieva.github.io/commit/64a07b6))
+* **Dependencies' banners:** Removed with stripCssComments ([9ac7b66](https://github.com/danielametodieva/danielametodieva.github.io/commit/9ac7b66))
+
+
+### Features
+
+* **Google Analytics:** Added Google Analytics code ([3a21ae9](https://github.com/danielametodieva/danielametodieva.github.io/commit/3a21ae9))
+* **Modernizr:** Included Modernizr in the project ([44af1c6](https://github.com/danielametodieva/danielametodieva.github.io/commit/44af1c6))
+* **Pug lint:** Added linter for Pug markup ([06eeb8d](https://github.com/danielametodieva/danielametodieva.github.io/commit/06eeb8d))
+* **WEBP support:** Added WEBP backgrounds ([ec0c71e](https://github.com/danielametodieva/danielametodieva.github.io/commit/ec0c71e))
+
+
+
 <a name="1.5.0"></a>
 # 1.5.0 (2016-08-27)
 

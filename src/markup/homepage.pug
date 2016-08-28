@@ -7,59 +7,60 @@ doctype html
 
 = '\n'
 
-html(lang="en")
-    head
-        title #{pkg.title} - #{pkg.author.name}
-
-        = '\n'
-
-        include includes/head/meta
-
-        include includes/head/webapp
-
-        include includes/head/social/google
-        include includes/head/social/facebook
-        include includes/head/social/twitter
-
-        include includes/head/robots
-
-        include includes/head/favicons
-
-        include includes/head/styles
-
-        include includes/head/fonts
+html(lang='en')
+  head
+    title #{pkg.title} - #{pkg.author.name}
 
     = '\n'
 
-    body.curtain(ontouchstart='')
-        .wallpaper.bgr
+    include includes/head/meta
 
-        main
-            a.toggle.text
+    include includes/head/webapp
 
-            section
-                .glass.bgr
+    include includes/head/social/google
+    include includes/head/social/facebook
+    include includes/head/social/twitter
 
-                article
-                    span.dragzone(title='Move around')
-                    .table
-                        .row
-                            header.cf
-                                a.toggle.arrow
+    include includes/head/robots
 
-                                if profiles
-                                    include includes/components/profiles
+    include includes/head/favicons
 
-                        .row
-                            .cell
-                                .content
-                                    include includes/components/title
+    include includes/head/styles
 
-                                    include includes/components/text
+    include includes/head/fonts
 
-                        .row
-                            footer
-                                include includes/components/logotype
+  = '\n'
 
+  body.curtain(ontouchstart='')
+    .wallpaper.bgr
 
-        include includes/foot/scripts
+    main
+      a.toggle.text
+
+      section
+        .glass.bgr
+
+        article
+          span.dragzone(title='Move around')
+          .table
+            .row
+              header.cf
+                a.toggle.arrow
+
+                if profiles
+                  include includes/components/profiles
+
+            .row
+              .cell
+                .content
+                  include includes/components/title
+
+                  include includes/components/text
+
+            .row
+              footer
+                include includes/components/logotype
+
+    include includes/foot/scripts
+
+    include includes/foot/analytics
