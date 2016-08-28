@@ -31,6 +31,7 @@
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-conventional-changelog": "^6.1.0",
+    "grunt-cwebp": "^2.1.0",
     "grunt-open": "^0.2.3",
     "grunt-real-favicon": "^0.1.7",
     "grunt-scss-lint": "^0.3.8",

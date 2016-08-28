@@ -21,7 +21,7 @@ module.exports = {
 
     images: {
         files: ['src/images/projects/*.*'],
-        tasks: ['blurred_images', 'tinypng', 'clean:images']
+        tasks: ['blurred_images', 'tinypng', 'cwebp', 'clean:images']
     },
 
     favicons: {
