@@ -6,7 +6,7 @@ module.exports = {
 
     markup: {
         files: ['src/markup/**/*.pug', 'src/model/**/*.json'],
-        tasks: ['clean:markup', 'pug']
+        tasks: ['puglint', 'clean:markup', 'pug']
     },
 
     styles: {
