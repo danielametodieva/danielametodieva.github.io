@@ -1,3 +1,13 @@
+<a name="1.6.1"></a>
+## 1.6.1 (2016-08-28)
+
+
+### Bug Fixes
+
+* **Transition:** Broken initial fade in transition ([82b8a88](https://github.com/danielametodieva/danielametodieva.github.io/commit/82b8a88))
+
+
+
 <a name="1.6.0"></a>
 # 1.6.0 (2016-08-28)
 
