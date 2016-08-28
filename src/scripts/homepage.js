@@ -86,17 +86,16 @@
             slideshow: function() {
                 var prepareNextBackground = function() {
                     currentBGR = parseInt(currentBGR) !== backgroundsLength ?
-                    parseInt(currentBGR) + 1 :
-                        1;
+                    parseInt(currentBGR) + 1 : 1;
 
-                    var bgrs = [ [$('body'), 'wallpaper'], [$('section'), 'glass'] ];
+                    var bgrs = ['wallpaper', 'glass'];
 
                     for (var i in bgrs) {
                         var new_bgr = ut.setBackground(
-                            $('<div class="bgr js_queue ' + bgrs[i][1] + '">')
+                            $('<div class="bgr js_queue ' + bgrs[i] + '">')
                         );
 
-                        bgrs[i][0].prepend(new_bgr);
+                        $('.' + bgrs[i] + '-box').prepend(new_bgr);
                     }
 
                     return this;
