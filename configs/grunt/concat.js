@@ -8,8 +8,8 @@ module.exports = {
         },
         src: [
             // External libraries
+            'src/scripts/modernizr-webp.min.js',
             'bower_components/css_browser_selector/css_browser_selector.min.js',
-            'bower_components/modernizr-min/dist/modernizr.min.js',
             'bower_components/fastclick/lib/fastclick.js',
             'bower_components/jquery/dist/jquery.min.js',
             'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',

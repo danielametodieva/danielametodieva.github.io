@@ -14,6 +14,7 @@ bower_components/
 
 ## BUILD ARTEFACTS ##
 /src/images/projects/blurred
+/src/scripts/modernizr-webp.min.js
 
 ## DISTRIBUTION ##
 /dist

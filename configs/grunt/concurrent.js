@@ -11,7 +11,7 @@ module.exports = {
         ['stripCssComments', 'compass'],
 
         // scripts
-        ['concat', 'uglify'],
+        ['modernizr', 'concat', 'uglify'],
 
         // images
         ['blurred_images', 'tinypng', 'cwebp', 'clean:images']
