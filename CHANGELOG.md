@@ -1,3 +1,13 @@
+<a name="1.6.2"></a>
+## 1.6.2 (2016-08-29)
+
+
+### Bug Fixes
+
+* **Modernizr:** Replaced full version with a custom build ([af45c98](https://github.com/danielametodieva/danielametodieva.github.io/commit/af45c98))
+
+
+
 <a name="1.6.1"></a>
 ## 1.6.1 (2016-08-28)
 

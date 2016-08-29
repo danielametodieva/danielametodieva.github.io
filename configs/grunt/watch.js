@@ -16,7 +16,7 @@ module.exports = {
 
     scripts: {
         files: ['src/scripts/**/*.js'],
-        tasks: ['jshint', 'clean:scripts', 'concat', 'uglify']
+        tasks: ['jshint', 'clean:scripts', 'modernizr', 'concat', 'uglify']
     },
 
     images: {
