@@ -7,7 +7,6 @@
   "disallowDuplicateAttributes": true,
   "disallowHtmlText": null,
   "disallowIdAttributeWithStaticValue": true,
-  "disallowIdLiteralsBeforeAttributes": true,
   "disallowIdLiterals": null,
   "disallowMultipleLineBreaks": true,
   "disallowSpaceAfterCodeOperator": null,

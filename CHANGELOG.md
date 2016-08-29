@@ -1,3 +1,20 @@
+<a name="1.7.0"></a>
+# 1.7.0 (2016-08-29)
+
+
+### Bug Fixes
+
+* **JSHint:** Excluded Modernizr ([9f7b91b](https://github.com/danielametodieva/danielametodieva.github.io/commit/9f7b91b))
+
+
+### Features
+
+* **Keyboard:** Ability to toggle the content with the Space key ([910444a](https://github.com/danielametodieva/danielametodieva.github.io/commit/910444a))
+* **Pug lint:** Removed "disallowIdLiteralsBeforeAttributes" ([49524fd](https://github.com/danielametodieva/danielametodieva.github.io/commit/49524fd))
+* **Text selection:** Changed selection colors ([974ef75](https://github.com/danielametodieva/danielametodieva.github.io/commit/974ef75))
+
+
+
 <a name="1.6.2"></a>
 ## 1.6.2 (2016-08-29)
 

@@ -4,10 +4,14 @@
 
 //====================> 1. Box-sizing
 
-*,
-*::before,
-*::after {
-  @include box-sizing(border-box);
+* {
+  @include selection($col-black, $col-white);
+
+  &,
+  &::before,
+  &::after {
+    @include box-sizing(border-box);
+  }
 }
 
 
