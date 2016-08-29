@@ -56,27 +56,34 @@
 
             contentToggle: function() {
                 var $toggle = $('.toggle'),
-                    $body = $('body');
+                    $body = $('body'),
+                    toggle = function() {
+                        var mode = $body.attr('data-mode') === 'opened' ? 'closed' : 'opened',
+                            $toggleText = $('.toggle.text'),
+                            $toggleArrow = $('.toggle.arrow');
 
-                $toggle.click(function() {
-                    var mode = $body.attr('data-mode') === 'opened' ? 'closed' : 'opened',
-                        $toggleText = $('.toggle.text'),
-                        $toggleArrow = $('.toggle.arrow');
+                        $body.attr('data-mode', mode);
 
-                    $body.attr('data-mode', mode);
+                        if (mode === 'closed') {
+                            var top = $toggleArrow.offset().top,
+                                left = $toggleArrow.offset().left;
 
-                    if (mode === 'closed') {
-                        var top = $toggleArrow.offset().top,
-                            left = $toggleArrow.offset().left;
+                            $toggleText.css({top: top, left: left});
 
-                        $toggleText.css({top: top, left: left});
+                            setTimeout(function() {
+                                $toggleText.addClass('show');
+                            }, 300);
+                        }
+                        else {
+                            $toggleText.removeClass('show');
+                        }
+                    };
 
-                        setTimeout(function() {
-                            $toggleText.addClass('show');
-                        }, 300);
-                    }
-                    else {
-                        $toggleText.removeClass('show');
+                $toggle.click(toggle);
+
+                $(document).keyup(function(e) {
+                    if (e.keyCode === 32) {
+                        toggle();
                     }
                 });
 
