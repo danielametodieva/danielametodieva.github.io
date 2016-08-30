@@ -118,6 +118,8 @@
     font-weight: 300;
 
     &::after {
+      @include translate3d(0, 0, 0);
+
       position: absolute;
       bottom: 0;
       left: 0;

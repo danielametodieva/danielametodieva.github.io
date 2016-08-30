@@ -57,9 +57,13 @@
             contentToggle: function() {
                 var $toggle = $('.toggle'),
                     $body = $('body'),
-                    toggle = function() {
-                        var mode = $body.attr('data-mode') === 'opened' ? 'closed' : 'opened',
-                            $toggleText = $('.toggle.text'),
+                    getMode = function() {
+                        return $body.attr('data-mode') === 'opened' ? 'closed' : 'opened';
+                    },
+                    toggle = function(mode) {
+                        mode = mode ? mode : getMode();
+
+                        var $toggleText = $('.toggle.text'),
                             $toggleArrow = $('.toggle.arrow');
 
                         $body.attr('data-mode', mode);
@@ -82,9 +86,11 @@
                 $toggle.click(toggle);
 
                 $(document).keyup(function(e) {
-                    if (e.keyCode === 32) {
-                        toggle();
-                    }
+                    var mode = e.keyCode === 27 || e.keyCode === 38 ? 'closed' :
+                               e.keyCode === 13 || e.keyCode === 40 ? 'opened' :
+                               e.keyCode === 32 ? getMode() : null;
+
+                    if (mode && $body.attr('data-mode') !== mode) { toggle(mode); }
                 });
 
                 return this;
