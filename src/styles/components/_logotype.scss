@@ -13,6 +13,19 @@
   margin: 0 auto;
   background: inline-image('logotype.svg') no-repeat center top;
 
+  @at-root {
+    html:not(.mobile) {
+      .logotype {
+        @include transition(opacity .2s ease-in-out);
+        @include opacity(.8);
+      }
+
+      article:hover .logotype {
+        @include opacity(1);
+      }
+    }
+  }
+
   @media screen and (max-width: 768px) and (max-height: 620px) and (orientation: landscape) {
     padding-top: 12%;
   }
