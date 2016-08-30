@@ -1,3 +1,19 @@
+<a name="1.8.0"></a>
+# 1.8.0 (2016-08-30)
+
+
+### Bug Fixes
+
+* **Title underline:** Graphic glitch under Chrome ([fe54dc7](https://github.com/danielametodieva/danielametodieva.github.io/commit/fe54dc7))
+
+
+### Features
+
+* **Keyboard:** Ability to toggle the content with more keyboard keys ([7a177ae](https://github.com/danielametodieva/danielametodieva.github.io/commit/7a177ae))
+* **Logotype transparency:** Opacity goes solid on :hover ([a95d5e3](https://github.com/danielametodieva/danielametodieva.github.io/commit/a95d5e3))
+
+
+
 <a name="1.7.0"></a>
 # 1.7.0 (2016-08-29)
 
