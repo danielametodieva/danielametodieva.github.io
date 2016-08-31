@@ -83,7 +83,7 @@
                         }
                     };
 
-                $toggle.click(toggle);
+                $toggle.click(function() { toggle(); });
 
                 $(document).keyup(function(e) {
                     var mode = e.keyCode === 27 || e.keyCode === 38 ? 'closed' :
