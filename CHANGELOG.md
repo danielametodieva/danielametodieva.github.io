@@ -1,3 +1,18 @@
+<a name="1.9.0"></a>
+# 1.9.0 (2016-08-31)
+
+
+### Bug Fixes
+
+* **Broken content toggle:** Restored hidden toggle ([4a82f3c](https://github.com/danielametodieva/danielametodieva.github.io/commit/4a82f3c))
+
+
+### Features
+
+* **Profiles & Toggle sizes:** Big sizes for mobile ([d3a9ca5](https://github.com/danielametodieva/danielametodieva.github.io/commit/d3a9ca5))
+
+
+
 <a name="1.8.0"></a>
 # 1.8.0 (2016-08-30)
 
