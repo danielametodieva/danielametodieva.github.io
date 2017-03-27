@@ -7,7 +7,7 @@ script: bash ./deploy.sh
 env:
   global:
   - ENCRYPTION_LABEL: "f223f14fc897"
-  - COMMIT_AUTHOR_EMAIL: "metodieva.daniel@gmail.com"
+  - COMMIT_AUTHOR_EMAIL: "daniela.p.metodieva@gmail.com"
 
 before_script:
   - sudo apt-get install graphicsmagick
