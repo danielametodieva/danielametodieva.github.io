@@ -11,7 +11,9 @@
     content: ' ';
   }
 
-  &::after { clear: both; }
+  &::after {
+    clear: both;
+  }
 }
 
 
@@ -55,6 +57,18 @@
 
     .no-webp &[data-project='#{$i}'] {
       background-image: url('#{$path}project#{$i}.jpg');
+    }
+  }
+}
+
+
+//--------------------------| Selection
+
+@mixin selection($color, $background) {
+  @each $prefix in ('-moz-', '') {
+    ::#{$prefix}selection {
+      color: $color;
+      background: $background;
     }
   }
 }

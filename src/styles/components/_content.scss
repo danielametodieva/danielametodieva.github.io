@@ -170,7 +170,7 @@
       @include column-count(2);
 
       p {
-        @include break-after(always);
+        @include column-break(after, always);
       }
     }
   }

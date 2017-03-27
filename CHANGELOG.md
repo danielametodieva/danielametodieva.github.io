@@ -1,3 +1,15 @@
+<a name="1.10.0"></a>
+# 1.10.0 (2017-03-27)
+
+
+### Features
+
+* **Bundle:** Removed Ruby dependencies ([9cf6368](https://github.com/danielametodieva/danielametodieva.github.io/commit/9cf6368))
+* **LibSass:** Replaced Ruby Sass with Node Sass ([ad1c2d7](https://github.com/danielametodieva/danielametodieva.github.io/commit/ad1c2d7))
+* **Packages:** Replaced Bower with NPM ([91ffb50](https://github.com/danielametodieva/danielametodieva.github.io/commit/91ffb50))
+
+
+
 <a name="1.9.0"></a>
 # 1.9.0 (2016-08-31)
 

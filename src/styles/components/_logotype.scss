@@ -11,7 +11,7 @@
   max-width: 356px;
   padding-top: 19.78125%;
   margin: 0 auto;
-  background: inline-image('logotype.svg') no-repeat center top;
+  background: url(data-uri('src/images/logotype.svg')) no-repeat center top;
 
   @at-root {
     html:not(.mobile) {

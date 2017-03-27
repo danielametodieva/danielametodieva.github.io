@@ -5,7 +5,7 @@
 //====================> 1. Box-sizing
 
 * {
-  @include selection($col-black, $col-white);
+  @include selection($col-white, $col-black);
 
   &,
   &::before,
@@ -27,6 +27,7 @@ html {
 body {
   @include font-smoothing();
 
+  margin: 0;
   overflow: hidden;
   font-family: $font-family-base;
   font-size: $font-size-base;
