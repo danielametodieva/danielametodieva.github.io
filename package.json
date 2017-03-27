@@ -65,6 +65,6 @@
     "photoshop"
   ],
   "scripts": {
-    "start": "npm install && bundle install && grunt clean:all && grunt dev"
+    "start": "npm install && grunt clean:all && grunt dev"
   }
 }

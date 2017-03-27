@@ -9,7 +9,6 @@ function build {
   node -v
   npm install -g grunt-cli
   npm install
-  bundle install
   grunt build --target=prod
 }
 
