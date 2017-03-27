@@ -2,7 +2,7 @@
   "name": "homepage",
   "title": "A passion for retouch",
   "description": "Daniela Metodieva's personal webpage",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
@@ -15,13 +15,14 @@
     "url": "http://daniela.pro"
   },
   "devDependencies": {
-    "bower": "^1.7.9",
+    "compass-mixins": "^0.12.10",
+    "css-browser-selector": "^0.6.5",
+    "fastclick": "^1.0.6",
     "grunt": "^0.4.5",
     "grunt-blurred-images": "^1.1.1",
     "grunt-bump": "^0.6.0",
     "grunt-concurrent": "^2.3.1",
     "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-compass": "^1.1.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
@@ -36,13 +37,22 @@
     "grunt-open": "^0.2.3",
     "grunt-puglint": "^1.0.0",
     "grunt-real-favicon": "^0.2.0",
-    "grunt-scss-lint": "^0.5.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-sass-lint": "^0.2.2",
     "grunt-shell": "^2.1.0",
     "grunt-strip-css-comments": "^1.3.0",
     "grunt-tinypng": "^0.7.0",
+    "hover.css": "^2.2.0",
     "http-rewrite-middleware": "^0.1.6",
+    "jquery": "^3.2.1",
+    "jquery-ui-touch-punch": "^0.2.3",
+    "lib-sass-data-uri": "0.0.2",
     "load-grunt-config": "^0.19.2",
     "load-grunt-tasks": "^3.5.2",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "memoryroll": "^1.0.3",
+    "node-sass-json-importer": "^3.0.2",
+    "normalize.css": "^6.0.0",
     "time-grunt": "^1.4.0"
   },
   "keywords": [
@@ -55,6 +65,6 @@
     "photoshop"
   ],
   "scripts": {
-    "start": "npm install && bundle install && bower install && grunt clean:all && grunt dev"
+    "start": "npm install && grunt clean:all && grunt dev"
   }
 }

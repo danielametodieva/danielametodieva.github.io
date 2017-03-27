@@ -1,12 +1,12 @@
 module.exports = {
-    options: {
-        preserve: false
-    },
+  options: {
+    preserve: false
+  },
 
-    task: {
-        files: {
-            'bower_components/normalize-css/normalize.css': 'bower_components/normalize-css/normalize.css',
-            'bower_components/hover/scss/hover.scss': 'bower_components/hover/scss/hover.scss'
-        }
+  task: {
+    files: {
+      'node_modules/normalize.css/normalize.css': 'node_modules/normalize.css/normalize.css',
+      'node_modules/hover.css/scss/hover.scss': 'node_modules/hover.css/scss/hover.scss'
     }
+  }
 };

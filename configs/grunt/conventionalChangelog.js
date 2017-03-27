@@ -1,13 +1,13 @@
 module.exports = {
-    options: {
-        changelogOpts: {
-            preset: 'angular'
-        },
-        context: {
-            linkCompare: false
-        }
+  options: {
+    changelogOpts: {
+      preset: 'angular'
     },
-    release: {
-        src: 'CHANGELOG.md'
+    context: {
+      linkCompare: false
     }
+  },
+  release: {
+    src: 'CHANGELOG.md'
+  }
 };
