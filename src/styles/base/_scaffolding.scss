@@ -27,6 +27,7 @@ html {
 body {
   @include font-smoothing();
 
+  margin: 0;
   overflow: hidden;
   font-family: $font-family-base;
   font-size: $font-size-base;
