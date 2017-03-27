@@ -9,14 +9,14 @@ module.exports = {
     src: [
       // External libraries
       'src/scripts/modernizr-webp.min.js',
-      'bower_components/css_browser_selector/css_browser_selector.min.js',
-      'bower_components/fastclick/lib/fastclick.js',
-      'bower_components/jquery/dist/jquery.min.js',
-      'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
-      'bower_components/memoryroll/dist/js/jquery.memoryroll.min.js',
+      'node_modules/css-browser-selector/css_browser_selector.min.js',
+      'node_modules/fastclick/lib/fastclick.js',
+      'node_modules/jquery/dist/jquery.min.js',
+      'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+      'node_modules/memoryroll/dist/js/jquery.memoryroll.min.js',
 
       'src/scripts/jquery-ui.min.js',
-      'bower_components/jqueryui-touch-punch/jquery.ui.touch-punch.min.js',
+      'node_modules/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js',
 
       // Internal scripts
       'src/scripts/<%= pkg.name %>.js'

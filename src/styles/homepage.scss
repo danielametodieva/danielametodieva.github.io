@@ -10,9 +10,9 @@
 
 //--------------------------| Dependencies
 
-@import 'CSS:../../bower_components/normalize-css/normalize';
-@import 'CSS:../../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min';
-@import '../../bower_components/hover/scss/hover';
+@import 'CSS:../../node_modules/normalize.css/normalize';
+@import 'CSS:../../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar';
+@import '../../node_modules/hover.css/scss/hover';
 
 
 //--------------------------| Libraries

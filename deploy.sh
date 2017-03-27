@@ -10,7 +10,6 @@ function build {
   npm install -g grunt-cli
   npm install
   bundle install
-  bower install
   grunt build --target=prod
 }
 
