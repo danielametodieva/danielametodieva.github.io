@@ -17,7 +17,7 @@ module.exports = {
   release: {
     command: [
       'git add . && git commit -m "Bump version to <%= pkg.version %>"',
-      'git checkout -b staging prod',
+      'git checkout -b prod origin/prod && git checkout -b staging prod',
       'git merge release',
       'touch CHANGELOG.md',
       'grunt conventionalChangelog',
@@ -25,11 +25,10 @@ module.exports = {
       'git checkout prod',
       'git merge --no-ff staging -m "Release v<%= pkg.version %>"',
       'grunt bump-commit',
-      'git branch -D staging',
       'git checkout dev',
       'git merge --no-ff release -m \'Merge branch "release" into "dev"\'',
       'git push',
-      'git branch -D release',
+      'git branch -D release && git branch -D staging && git branch -D prod',
       'grunt concurrent:review'
     ].join('&&')
   }
