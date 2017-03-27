@@ -5,7 +5,7 @@
 //====================> 1. Box-sizing
 
 * {
-  @include selection($col-black, $col-white);
+  @include selection($col-white, $col-black);
 
   &,
   &::before,

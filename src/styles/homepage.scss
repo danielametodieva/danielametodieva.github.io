@@ -4,14 +4,13 @@
 
 //--------------------------| Compass
 
-@import 'compass';
-@import 'compass/css3/selection';
+@import '../../node_modules/compass-mixins/lib/compass';
 
 
 //--------------------------| Dependencies
 
-@import 'CSS:../../node_modules/normalize.css/normalize';
-@import 'CSS:../../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar';
+@import '../../node_modules/normalize.css/normalize';
+@import '../../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar';
 @import '../../node_modules/hover.css/scss/hover';
 
 
@@ -37,4 +36,7 @@
 
 //--------------------------| Components
 
-@import 'components/*.*';
+@import 'components/content';
+@import 'components/logotype';
+@import 'components/profiles';
+@import 'components/toggle';

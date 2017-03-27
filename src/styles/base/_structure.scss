@@ -81,7 +81,7 @@ section {
   }
 
   html:not(.mobile) &:hover::after {
-    background-color: rgba($col-black, .50);
+    background-color: rgba($col-black, .5);
   }
 }
 
