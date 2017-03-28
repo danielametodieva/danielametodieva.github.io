@@ -1,6 +1,6 @@
 module.exports = {
   options: {
-    jshintrc: 'configs/conventions/.jshintrc',
+    jshintrc: 'configs/linters/.jshintrc',
     debug: false,
     ignores: [
       'src/scripts/jquery-ui.min.js',

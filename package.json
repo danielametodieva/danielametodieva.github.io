@@ -68,5 +68,5 @@
   "scripts": {
     "start": "npm install && grunt clean:all && grunt dev"
   },
-  "sasslintConfig": "configs/conventions/.sass-lint.yml"
+  "sasslintConfig": "configs/linters/.sass-lint.yml"
 }
