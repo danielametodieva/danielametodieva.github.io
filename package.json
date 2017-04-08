@@ -2,7 +2,7 @@
   "name": "homepage",
   "title": "A passion for retouch",
   "description": "Daniela Metodieva's personal webpage",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
   "homepage": "http://daniela.pro",
   "author": {
     "name": "Daniela Metodieva",
-    "email": "metodieva.daniel@gmail.com",
+    "email": "daniela.p.metodieva@gmail.com",
     "url": "http://daniela.pro"
   },
   "devDependencies": {
@@ -51,6 +51,7 @@
     "load-grunt-tasks": "^3.5.2",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "memoryroll": "^1.0.3",
+    "node-sass-globbing": "0.0.23",
     "node-sass-json-importer": "^3.0.2",
     "normalize.css": "^6.0.0",
     "time-grunt": "^1.4.0"
@@ -66,5 +67,6 @@
   ],
   "scripts": {
     "start": "npm install && grunt clean:all && grunt dev"
-  }
+  },
+  "sasslintConfig": "configs/linters/.sass-lint.yml"
 }

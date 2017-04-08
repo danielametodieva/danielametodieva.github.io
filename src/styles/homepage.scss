@@ -27,16 +27,9 @@
 
 //--------------------------| Base
 
-@import 'base/scaffolding';
-@import 'base/utilities';
-@import 'base/typography';
-@import 'base/structure';
-@import 'base/curtain';
+@import 'base/**/*.*';
 
 
 //--------------------------| Components
 
-@import 'components/content';
-@import 'components/logotype';
-@import 'components/profiles';
-@import 'components/toggle';
+@import 'components/**/*.*';

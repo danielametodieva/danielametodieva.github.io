@@ -4,12 +4,13 @@ var grunt = require('grunt'),
     path = require('path'),
     mime = require('mime-types'),
     sassDataURI = require('lib-sass-data-uri'),
-    jsonImporter = require('node-sass-json-importer');
+    jsonImporter = require('node-sass-json-importer'),
+    nodeSassGlobbing = require('node-sass-globbing');
 
 module.exports = {
 
   options: {
-    importer: jsonImporter,
+    importer: [jsonImporter, nodeSassGlobbing],
     sourceMap: grunt.option('target') !== 'prod',
     outputStyle: 'compressed',
     functions: Object.assign({}, sassDataURI)
