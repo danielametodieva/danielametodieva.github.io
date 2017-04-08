@@ -1,16 +1,4 @@
-## LOGS ##
-npm-debug.log
-
-## DEPENDENCIES ##
-node_modules/
-
-## SYSTEM ##
-.DS_Store
-.idea
-
-## BUILD ARTEFACTS ##
-/src/images/projects/blurred
+## BUILD ARTIFACTS ##
+!.gitignore
+/src/images/projects/blurred/
 /src/scripts/modernizr-webp.min.js
-
-## DISTRIBUTION ##
-/dist
