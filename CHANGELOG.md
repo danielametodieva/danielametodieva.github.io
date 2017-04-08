@@ -1,3 +1,14 @@
+<a name="1.11.0"></a>
+# 1.11.0 (2017-04-08)
+
+
+### Features
+
+* **Deploy:** GitHub Pages & GitHub Releases ([e2fedb9](https://github.com/danielametodieva/danielametodieva.github.io/commit/e2fedb9))
+* **Package.json:** daniela.p.metodieva[@gmail](https://github.com/gmail).com ([35b332d](https://github.com/danielametodieva/danielametodieva.github.io/commit/35b332d))
+
+
+
 <a name="1.10.0"></a>
 # 1.10.0 (2017-03-27)
 
