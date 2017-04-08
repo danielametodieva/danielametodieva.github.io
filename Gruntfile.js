@@ -4,8 +4,7 @@ module.exports = function(grunt) {
       env = grunt.option('target') || 'dev',
       banner = '/*! <%= pkg.title || pkg.name %>\n' +
         '* <%= pkg.homepage%> (v<%= pkg.version %>)\n' +
-        '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> */\n',
-      domain = 'daniela.pro';
+        '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> */\n';
 
   require('time-grunt')(grunt);
 
@@ -23,7 +22,6 @@ module.exports = function(grunt) {
 
     if (env === 'prod') {
       grunt.task.run(['concurrent:prod']);
-      grunt.file.write('dist/CNAME', domain);
     }
   });
 };

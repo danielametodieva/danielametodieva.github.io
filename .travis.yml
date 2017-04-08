@@ -1,17 +1,30 @@
 language: node_js
 node_js:
-  - "node"
-
-script: bash ./deploy.sh
-
-env:
-  global:
-  - ENCRYPTION_LABEL: "f223f14fc897"
-  - COMMIT_AUTHOR_EMAIL: "metodieva.daniel@gmail.com"
-
+- node
 before_script:
   - sudo apt-get install graphicsmagick
-
+script:
+- npm install grunt-cli -g
+- npm install
+- grunt build --target='prod'
+- printf '.gitignore\ndeployed*' > dist/.gitignore
+- printf 'daniela.pro' > dist/CNAME
+- cp 'README.md' dist
 branches:
   only:
-  - prod
+  - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+deploy:
+- provider: releases
+  api_key:
+    secure: sNOKY/rto/bMeWqMECfdDR28SLyPHr16aMtWGLRmKoh0ebdgA4ZE0Lfk3aj5kgSuT7JSWM9DGwLDNcyeOmnIc4k0b7vn9XmbW4w8AlpA/3s8lcc5CKXEm9Lu2y2+JkGitM3/TPSXV4VwuqYw2/2Dw7Pk4IXNA6WQEUmhP6QJJsaRm3VqBwHcmVMZJNwUYKM45Uo7gpjLWplbefIllroCkIUa6OcWdGdKd2lf0kW1LPYbT2ylb84JoJohE1nYWNiHvJ87gGyHsrRqDDqILFZ6K5CMx3CzwILOBnSUoNM0nCbnHGmIIxCZYoXPAu0USU5cKZhsoSZfaNdmWTtx5AKyfJ/CGZMmUSos17cc172gRBoCH+NCjecJx+njFqIkC9KLYIRTjgYLEp+t8JA2Ucc2rO0pEFmdwknZ0RJTDt1qxIMlhGpiRkXIheGM2wXCAfNrko/55DEaicicCOCuN4oOi5kiOsNfZYy6JOxw3VVvKVgQTLffz3TUXVv0ZLXMSXypdGJRkUtjaLzVDwoFMkgG96EvvLBdCm2s7Od1LO//mOBQTZb9zqoNE6eYLUVnQ2ImbDjiPY+P4rWVdEe9kbVwBgkMQrILsHz6Bt3a0IUj3DGIv5KwbC82cmugJjsD/n0nE3S+1vtNTfdoiq5vCymKk0iTb1I61AS5vbZntEH8x3o=
+  skip_cleanup: true
+  on:
+    tags: true
+- provider: pages
+  skip_cleanup: true
+  local_dir: dist
+  target_branch: master
+  github_token:
+    secure: sNOKY/rto/bMeWqMECfdDR28SLyPHr16aMtWGLRmKoh0ebdgA4ZE0Lfk3aj5kgSuT7JSWM9DGwLDNcyeOmnIc4k0b7vn9XmbW4w8AlpA/3s8lcc5CKXEm9Lu2y2+JkGitM3/TPSXV4VwuqYw2/2Dw7Pk4IXNA6WQEUmhP6QJJsaRm3VqBwHcmVMZJNwUYKM45Uo7gpjLWplbefIllroCkIUa6OcWdGdKd2lf0kW1LPYbT2ylb84JoJohE1nYWNiHvJ87gGyHsrRqDDqILFZ6K5CMx3CzwILOBnSUoNM0nCbnHGmIIxCZYoXPAu0USU5cKZhsoSZfaNdmWTtx5AKyfJ/CGZMmUSos17cc172gRBoCH+NCjecJx+njFqIkC9KLYIRTjgYLEp+t8JA2Ucc2rO0pEFmdwknZ0RJTDt1qxIMlhGpiRkXIheGM2wXCAfNrko/55DEaicicCOCuN4oOi5kiOsNfZYy6JOxw3VVvKVgQTLffz3TUXVv0ZLXMSXypdGJRkUtjaLzVDwoFMkgG96EvvLBdCm2s7Od1LO//mOBQTZb9zqoNE6eYLUVnQ2ImbDjiPY+P4rWVdEe9kbVwBgkMQrILsHz6Bt3a0IUj3DGIv5KwbC82cmugJjsD/n0nE3S+1vtNTfdoiq5vCymKk0iTb1I61AS5vbZntEH8x3o=
+  on:
+    tags: true
