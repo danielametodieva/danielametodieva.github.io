@@ -1,3 +1,14 @@
+<a name="1.11.1"></a>
+## 1.11.1 (2017-06-11)
+
+
+### Bug Fixes
+
+* **Avatar's alt attr:** Set to #{pkg.author.name} ([fea9208](https://github.com/danielametodieva/danielametodieva.github.io/commit/fea9208))
+* **Email address:** Set to #{pkg.author.email} ([4381a96](https://github.com/danielametodieva/danielametodieva.github.io/commit/4381a96))
+
+
+
 <a name="1.11.0"></a>
 # 1.11.0 (2017-04-08)
 

@@ -5,4 +5,4 @@
     - var url = val.url.replace(/'/g, "")
     a.hvr-buzz-out(class='profile-' + index, href=url, target='_blank', title='Go to my ' + val.name + ' profile')
 
-  a.hvr-buzz-out.email(href='mailto:danielagrozdanova@gmail.com', title='Write me a note')
+  a.hvr-buzz-out.email(href='mailto:' + pkg.author.email, title='Write me a note')
