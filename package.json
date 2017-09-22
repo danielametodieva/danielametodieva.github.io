@@ -20,7 +20,7 @@
     "fastclick": "^1.0.6",
     "grunt": "^1.0.1",
     "grunt-blurred-images": "^1.1.1",
-    "grunt-bump": "^0.6.0",
+    "grunt-bump": "^0.7.3",
     "grunt-concurrent": "^2.3.1",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "^1.0.1",
