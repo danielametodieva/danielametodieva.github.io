@@ -1,3 +1,13 @@
+<a name="1.12.0"></a>
+# 1.12.0 (2018-05-07)
+
+
+### Features
+
+* **Behance profile:** Changed to danielametodieva ([3f2e804](https://github.com/danielametodieva/danielametodieva.github.io/commit/3f2e804))
+
+
+
 <a name="1.11.1"></a>
 ## 1.11.1 (2017-06-11)
 
