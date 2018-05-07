@@ -30,7 +30,7 @@
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-uglify": "^3.1.0",
-    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.1",
     "grunt-conventional-changelog": "^6.1.0",
     "grunt-cwebp": "^2.1.0",
     "grunt-modernizr": "^1.0.2",
