@@ -44,7 +44,7 @@
     "grunt-tinypng": "^0.7.0",
     "hover.css": "^2.3.1",
     "http-rewrite-middleware": "^0.1.6",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "jquery-ui-touch-punch": "^0.2.3",
     "lib-sass-data-uri": "0.0.3",
     "load-grunt-config": "^0.19.2",
