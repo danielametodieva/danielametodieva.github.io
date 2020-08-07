@@ -8,11 +8,11 @@
     "type": "git",
     "url": "git://github.com/danielametodieva/danielametodieva.github.io.git"
   },
-  "homepage": "http://daniela.pro",
+  "homepage": "https://daniela.pro",
   "author": {
     "name": "Daniela Metodieva",
     "email": "daniela.p.metodieva@gmail.com",
-    "url": "http://daniela.pro"
+    "url": "https://daniela.pro"
   },
   "devDependencies": {
     "compass-mixins": "^0.12.10",
