@@ -6,4 +6,4 @@
 
 However, it’s not the tool in the artist’s hands that makes results fabulous, but the creator’s vision. It’s the desire to retouch the life as we know it. Thus, not everyone can become a retoucher. Because photo editing is much more than some Photoshop skills…
 
-— [Daniela Metodieva](https://bg.linkedin.com/in/daniela-metodieva-2373a083 "Go to my LinkedIn profile")
+— [Daniela Metodieva](https://www.linkedin.com/in/danielametodieva/ "Go to my LinkedIn profile")
