@@ -1,4 +1,3 @@
 ## BUILD ARTIFACTS ##
 !.gitignore
-/src/images/projects/blurred/
 /src/scripts/modernizr-webp.min.js

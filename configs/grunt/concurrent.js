@@ -14,7 +14,7 @@ module.exports = {
     ['modernizr', 'concat', 'uglify'],
 
     // images
-    ['blurred_images', 'tinypng', 'cwebp', 'clean:images']
+    ['tinypng', 'cwebp']
   ],
 
   prod: [
