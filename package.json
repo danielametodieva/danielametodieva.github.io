@@ -2,17 +2,17 @@
   "name": "homepage",
   "title": "A passion for retouch",
   "description": "Daniela Metodieva's personal webpage",
-  "version": "1.13.0",
+  "version": "1.13.1",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": "git://github.com/danielametodieva/danielametodieva.github.io.git"
   },
-  "homepage": "http://daniela.pro",
+  "homepage": "https://daniela.pro",
   "author": {
     "name": "Daniela Metodieva",
     "email": "daniela.p.metodieva@gmail.com",
-    "url": "http://daniela.pro"
+    "url": "https://daniela.pro"
   },
   "devDependencies": {
     "compass-mixins": "^0.12.10",
