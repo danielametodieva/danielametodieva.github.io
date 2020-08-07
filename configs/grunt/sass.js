@@ -10,7 +10,8 @@ var grunt = require('grunt'),
 module.exports = {
 
   options: {
-    importer: [jsonImporter, nodeSassGlobbing],
+    implementation: sass,
+    importer: [jsonImporter(), nodeSassGlobbing],
     sourceMap: grunt.option('target') !== 'prod',
     outputStyle: 'compressed',
     functions: Object.assign({}, sassDataURI)
